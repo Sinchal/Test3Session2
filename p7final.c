@@ -23,3 +23,4 @@ int main()
 {
   printf("%d\n",gcd(16,24));
 }
+
