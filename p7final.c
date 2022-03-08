@@ -1,10 +1,13 @@
 #include<stdio.h>
+
 struct _fraction
 {
   int num,den;
 };
+
 typedef struct _fraction Fraction;
-  int gcd(int a,int b)
+
+int gcd(int a,int b)
   {
     int t;
     while (b != 0)
@@ -15,6 +18,7 @@ typedef struct _fraction Fraction;
       }
     return a;
 }
+
 int main()
 {
   printf("%d\n",gcd(16,24));
