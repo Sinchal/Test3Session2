@@ -1,15 +1,18 @@
 #include<stdio.h>
+
 typedef struct _fraction 
 {
     int num,den;
 }F;
+
 F input_fraction()
 {
     F f;
-    printf("enter num,den: \n ");
+    printf("enter the numerator and denominator \n ");
     scanf("%d%d",&f.num,&f.den);
     return f;
 }
+
 F smallest_fraction(F f1,F f2,F f3)
 {
     int cd=f1.den*f2.den*f3.den;
@@ -29,21 +32,12 @@ F smallest_fraction(F f1,F f2,F f3)
         return f3;
     }
 }
+
 void output(F f1,F f2,F f3,F smallest)
 {
-    if(f1.num==smallest.num && f1.den==smallest.den)
-    {
-        printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
-    }
-    else if(f2.num==smallest.num && f2.den==smallest.den)
-    {
-         printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
-    }
-    else
-    {
-         printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
-    }
+  printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
 }
+ 
 int main()
 {
     F f1,f2,f3,smallest;
